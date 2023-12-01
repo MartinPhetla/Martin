@@ -1,0 +1,246 @@
+body {
+    background-color: #2b2b2b; /* Black */
+    color: #d2b48c; /* Tan */
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #2b2b2b;; /* Tan */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#navbar a {
+    float: right;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 30px;
+    margin-top: 5px;
+    color: #d2b48c; /* Black */
+}
+
+#navbar a:hover {
+    /*background: #d2b48c;*/ /* Tan */
+    color: #d2b48c; /* Tan */
+	font-size: 20px;
+	
+}
+
+#navbar img {
+    border-radius: 50px;
+    margin-left: 10px;
+}
+
+.container {
+    position: relative;
+    max-width: 100%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: #2b2b2b; /* Black */
+    background: #d2b48c1f; /* Wheat */
+    color: #ffffff;
+    width: 97%;
+    transition: 1s ease;
+    opacity: 0;
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay a {
+    text-decoration: none;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    font-size: medium;
+    color: white;
+}
+
+.overlay:hover {
+    background-color: #2b2b2b; /* Black */
+    color: #f5deb3; /* Wheat */
+
+}
+
+table {
+    width: 100%;
+}
+
+span {
+    font-weight: bold;
+}
+
+.heading {
+    color: #d2b48c; /* Tan */
+    text-align: center;
+    text-decoration: underline;
+}
+
+.heading:hover {
+    box-shadow: 0px 10px #00000063;
+}
+
+.summary-centre {
+    text-align: center;
+}
+
+.summary-centre p:hover {
+    color: #deb887; /* BurlyWood */
+}
+
+#about h3 {
+    text-align: center;
+}
+
+.about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.about-image img:hover {
+    border-style: solid;
+    border-color: #f5deb3; /* Wheat */
+    border-radius: 50%;
+}
+
+#border {
+    padding-left: 10vh;
+    background: #d2b48c68; /* Tan */
+    width: 50%;
+	border-radius: 25px;
+}
+
+#border:hover {
+    padding-left: 10vh;
+    background: rgba(210, 180, 140, 0.221); /* Tan */
+    box-shadow: 1px 1px 1px 1px #f5deb3; /* Wheat */
+    border-radius: 25px;
+}
+
+.contact {
+    text-align: center;
+    background-color: #d2b48c68; /* Tan */
+	color: #2b2b2b;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 50px;
+}
+
+.contact input {
+    background-color: transparent;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-bottom-color: #2b2b2b; /* Black */
+}
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.map {
+    height: 225px;
+    width: 225px;
+    border-style: solid;
+    border-color: #2b2b2b; /* Black */
+    border-radius: 50%;
+}
+
+.socials {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.footer a:hover {
+    box-shadow: 5px 0px 10px 5px #2b2b2b; /* Black */
+    border-radius: 50%;
+}
+
+.footer-bar {
+	color: #2b2b2b;
+    background-color: #d2b48c; /* Tan */
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+}
+
+
+ #blog {
+            text-align: center;
+            padding: 50px 0;
+			
+        }
+
+        #blog-slider {
+            display: flex;
+            overflow: hidden;
+			
+        }
+
+        .blog-item {
+            flex: 0 0 100%;
+            transition: transform 0.5s ease;
+        }
+
+        #blog-slider img {
+            width: 20%; /* Reduce image width by half */
+            height: auto;
+            margin: 0 auto; /* Center the image */
+			border-radius: 20%;
+        }
+		#blog-slider img:hover {
+    box-shadow: 2px 0px 1px 3px #d2b48c; /* Black */
+    border-radius: 20%;
+}
+
+        .blog-description {
+            margin-top: 20px;
+        }
+
+        .portfolio-download {
+            margin-top: 50px;
+        }
+
+        .portfolio-download h2 {
+            color: #4682b4; /* Steel Blue */
+        }
+
+        .portfolio-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4682b4; /* Steel Blue */
+            color: #f5f5dc; /* Tan */
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .portfolio-download a:hover {
+            background-color: #f5f5dc; /* Tan */
+            color: #4682b4; /* Steel Blue */
+            /* Add a nice hover effect here */
+            box-shadow: 0px 5px 10px rgba(70, 130, 180, 0.3);
+        }
