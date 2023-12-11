@@ -28,14 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
     charElement.innerHTML = char;
 
     // Apply animation delay for each character
-    charElement.style.animation = `bounceFadeIn 1s steps(20, end) ${index * 0.1}s forwards`;
+    charElement.style.animation = `bounceFadeIn 1s steps(30, end) ${index * 0.2}s forwards`;
 
     // Append the character to the loading text element
     loadingText.appendChild(charElement);
   });
 
   // After the animation, execute the blog slider setup
-  const animationDuration = characters.length * 0.1 * 1000; // total animation duration in milliseconds
+  const animationDuration = characters.length * 0.2 * 1000; // total animation duration in milliseconds
 
   setTimeout(() => {
     // Hide the loading section
