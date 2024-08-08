@@ -50,34 +50,59 @@ body {
 .overlay {
     position: absolute;
     bottom: 0;
-    background: #7fdbbb; /* Black */
-    background: #d2b48c1f; /* Wheat */
-    color: #ffffff;
-    width: 97%;
-    transition: 1s ease;
-    opacity: 0;
-    font-size: 30px;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.7)), linear-gradient(rgba(0, 0, 0, 0.5), #0000ff4d 50%, #0000ff4d);
+    color: #303c4e;
+    width: 98%;
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 1; /* Always visible */
+    transition: background-color 15s ease;
+    box-shadow: -1px -1px 1px 1px #ffffff;
+    border-radius: 25px 25px 0 0;
+    
 }
 
-.container:hover .overlay {
-    opacity: 1;
+.overlay h1 {
+    margin: 0;
+    font-size: 8em;
+    animation: fadeInOut 3s infinite; /* Looping animation */
 }
 
 .overlay a {
+    display: inline-block;
     text-decoration: none;
-    border-style: solid;
-    border-color: white;
+    box-shadow: 1px 1px 1px 1px #fdfeff;
     border-radius: 10px;
-    font-size: medium;
-    color: white;
+    font-size: 1.2em;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 100px;
+    transition: background-color 100s ease;
 }
 
-.overlay:hover {
-    background-color: #2b2b2b; /* Black */
-    color: #f5deb3; /* Wheat */
+.overlay a:hover {
+    background-color: rgb(255, 255, 255);
+    color: #7fdbbb; /* Dark color for text on hover */
+}
 
+/* Animation for the name */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 }
 
 table {
