@@ -3,16 +3,19 @@
 body {
     background-color: #ffffff; /* white */
     color: #303c4e; /* Tan */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
 #navbar {
     overflow: hidden;
     background-color: #ffffff; /* Tan */
     position: fixed;
-    z-index: 1;
+    z-index: 1000; /* Ensure it stays above other content */
     top: 0;
     left: 0;
     width: 100%;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /* Optional: Add shadow for better visibility */
 }
 
 #navbar a {
@@ -21,8 +24,8 @@ body {
     text-align: center;
     text-decoration: none;
     font-size: 18px;
-    padding-right: 30px;
-    margin-top: 5px;
+    padding: 15px 20px;
+    margin: 0;
     color: #303c4e; /* Black */
 }
 
@@ -34,6 +37,11 @@ body {
 #navbar img {
     border-radius: 50px;
     margin-left: 10px;
+}
+
+/* Adjust the main content to avoid overlap with navbar */
+.main-content {
+    padding-top: 60px; /* Add padding to avoid content hiding under fixed navbar */
 }
 
 .container {
@@ -310,12 +318,14 @@ span {
 @media (max-width: 768px) {
     #navbar {
         position: relative;
+        box-shadow: none; /* Remove shadow on small screens */
     }
 
     #navbar a {
         float: none;
         display: block;
-        padding-right: 15px;
+        padding: 15px;
+        text-align: left; /* Adjust text alignment */
     }
 
     .overlay h1 {
@@ -335,12 +345,16 @@ span {
         height: 175px;
         width: 175px;
     }
+
+    .main-content {
+        padding-top: 80px; /* Adjust padding if needed */
+    }
 }
 
 @media (max-width: 576px) {
     #navbar a {
         font-size: 14px;
-        padding-right: 10px;
+        padding: 10px;
     }
 
     .overlay h1 {
