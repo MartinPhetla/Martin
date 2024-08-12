@@ -1,3 +1,5 @@
+/* Base Styles */
+
 body {
     background-color: #ffffff; /* white */
     color: #303c4e; /* Tan */
@@ -5,7 +7,7 @@ body {
 
 #navbar {
     overflow: hidden;
-    background-color: #ffffff;; /* Tan */
+    background-color: #ffffff; /* Tan */
     position: fixed;
     z-index: 1;
     top: 0;
@@ -25,10 +27,8 @@ body {
 }
 
 #navbar a:hover {
-    /*background: #d2b48c;*/ /* Tan */
     color: #7fdbbb; /* Tan */
-	font-size: 20px;
-	
+    font-size: 20px;
 }
 
 #navbar img {
@@ -63,7 +63,6 @@ body {
     transition: background-color 15s ease;
     box-shadow: -1px -1px 1px 1px #ffffff;
     border-radius: 25px 25px 0 0;
-    
 }
 
 .overlay h1 {
@@ -118,7 +117,6 @@ span {
     text-align: center;
 }
 
-
 .summary-centre {
     text-align: center;
 }
@@ -147,22 +145,20 @@ span {
     padding-left: 10vh;
     background: #ffffff68; /* Tan */
     width: 50%;
-	border-radius: 25px;
-    box-shadow: 1px 1px 1px 1px #6aaa94; /* Wheat */
     border-radius: 25px;
+    box-shadow: 1px 1px 1px 1px #6aaa94; /* Wheat */
 }
 
 #border:hover {
     padding-left: 10vh;
     background: #58585811; /* Tan */
     box-shadow: 1px 1px 1px 1px #58585856; /* Wheat */
-    border-radius: 25px;
 }
 
 .contact {
     text-align: center;
     background: #ffffff68; /* Tan */
-	color: #303c4e;
+    color: #303c4e;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 50px;
@@ -203,68 +199,174 @@ span {
 }
 
 .footer-bar {
-	color: #ffffff;
+    color: #ffffff;
     background-color: #2d463d; /* Tan */
     bottom: 0;
     left: 0;
     max-width: 100%;
 }
 
+#blog {
+    text-align: center;
+    padding: 50px 0;
+}
 
- #blog {
-            text-align: center;
-            padding: 50px 0;
-			
-        }
+#blog-slider {
+    display: flex;
+    overflow: hidden;
+}
 
-        #blog-slider {
-            display: flex;
-            overflow: hidden;
-			
-        }
+.blog-item {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease;
+}
 
-        .blog-item {
-            flex: 0 0 100%;
-            transition: transform 0.5s ease;
-        }
+#blog-slider img {
+    width: 20%; /* Reduce image width by half */
+    height: auto;
+    margin: 0 auto; /* Center the image */
+    border-radius: 20%;
+}
 
-        #blog-slider img {
-            width: 20%; /* Reduce image width by half */
-            height: auto;
-            margin: 0 auto; /* Center the image */
-			border-radius: 20%;
-        }
-		#blog-slider img:hover {
+#blog-slider img:hover {
     box-shadow: 2px 0px 1px 3px #6aaa94; /* Black */
     border-radius: 20%;
 }
 
-        .blog-description {
-            margin-top: 20px;
-        }
+.blog-description {
+    margin-top: 20px;
+}
 
-        .portfolio-download {
-            margin-top: 50px;
-        }
+.portfolio-download {
+    margin-top: 50px;
+}
 
-        .portfolio-download h2 {
-            color: #4682b4; /* Steel Blue */
-        }
+.portfolio-download h2 {
+    color: #4682b4; /* Steel Blue */
+}
 
-        .portfolio-download a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4682b4; /* Steel Blue */
-            color: #f5f5dc; /* Tan */
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+.portfolio-download a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4682b4; /* Steel Blue */
+    color: #f5f5dc; /* Tan */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
 
-        .portfolio-download a:hover {
-            background-color: #f5f5dc; /* Tan */
-            color: #4682b4; /* Steel Blue */
-            /* Add a nice hover effect here */
-            box-shadow: 0px 5px 10px rgba(70, 130, 180, 0.3);
-        }
+.portfolio-download a:hover {
+    background-color: #f5f5dc; /* Tan */
+    color: #4682b4; /* Steel Blue */
+    box-shadow: 0px 5px 10px rgba(70, 130, 180, 0.3);
+}
+
+/* Responsive Styles */
+
+@media (max-width: 1200px) {
+    #navbar a {
+        font-size: 16px;
+    }
+
+    .overlay h1 {
+        font-size: 6em;
+    }
+
+    .about-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #border {
+        width: 70%;
+        padding-left: 5vh;
+    }
+
+    .map {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 992px) {
+    #navbar a {
+        padding-right: 20px;
+    }
+
+    .overlay h1 {
+        font-size: 5em;
+    }
+
+    #blog-slider img {
+        width: 40%;
+    }
+
+    #border {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        position: relative;
+    }
+
+    #navbar a {
+        float: none;
+        display: block;
+        padding-right: 15px;
+    }
+
+    .overlay h1 {
+        font-size: 4em;
+    }
+
+    #blog-slider img {
+        width: 60%;
+    }
+
+    .contact {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .map {
+        height: 175px;
+        width: 175px;
+    }
+}
+
+@media (max-width: 576px) {
+    #navbar a {
+        font-size: 14px;
+        padding-right: 10px;
+    }
+
+    .overlay h1 {
+        font-size: 3em;
+    }
+
+    #blog-slider img {
+        width: 80%;
+    }
+
+    .about-image img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .map {
+        height: 150px;
+        width: 150px;
+    }
+
+    .portfolio-download a {
+        padding: 8px 16px;
+    }
+}
