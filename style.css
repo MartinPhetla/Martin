@@ -1,21 +1,22 @@
 /* Base Styles */
 
 body {
-    background-color: #ffffff; /* white */
-    color: #303c4e; /* Tan */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    background-color: #ffffff;
+    color: #303c4e;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Ensure consistent font rendering */
 }
 
 #navbar {
     overflow: hidden;
-    background-color: #ffffff; /* Tan */
+    background-color: #ffffff;
     position: fixed;
-    z-index: 1000; /* Ensure it stays above other content */
+    z-index: 1000;
     top: 0;
     left: 0;
     width: 100%;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /* Optional: Add shadow for better visibility */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
 
 #navbar a {
@@ -25,12 +26,11 @@ body {
     text-decoration: none;
     font-size: 18px;
     padding: 15px 20px;
-    margin: 0;
-    color: #303c4e; /* Black */
+    color: #303c4e;
 }
 
 #navbar a:hover {
-    color: #7fdbbb; /* Tan */
+    color: #7fdbbb;
     font-size: 20px;
 }
 
@@ -39,14 +39,14 @@ body {
     margin-left: 10px;
 }
 
-/* Adjust the main content to avoid overlap with navbar */
 .main-content {
-    padding-top: 60px; /* Add padding to avoid content hiding under fixed navbar */
+    padding-top: 60px;
 }
 
 .container {
     position: relative;
     max-width: 100%;
+    margin: 0 auto; /* Center content */
 }
 
 .image {
@@ -67,8 +67,8 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    opacity: 1; /* Always visible */
-    transition: background-color 15s ease;
+    opacity: 1;
+    transition: background-color 0.5s ease; /* Adjusted for smoother transition */
     box-shadow: -1px -1px 1px 1px #ffffff;
     border-radius: 25px 25px 0 0;
 }
@@ -76,7 +76,7 @@ body {
 .overlay h1 {
     margin: 0;
     font-size: 8em;
-    animation: fadeInOut 3s infinite; /* Looping animation */
+    animation: fadeInOut 3s infinite;
 }
 
 .overlay a {
@@ -88,12 +88,12 @@ body {
     color: #ffffff;
     padding: 10px 20px;
     margin-top: 100px;
-    transition: background-color 100s ease;
+    transition: background-color 0.3s ease; /* Adjusted for smoother transition */
 }
 
 .overlay a:hover {
     background-color: rgb(255, 255, 255);
-    color: #7fdbbb; /* Dark color for text on hover */
+    color: #7fdbbb;
 }
 
 /* Animation for the name */
@@ -121,7 +121,7 @@ span {
 }
 
 .heading {
-    color: #015266; /* Tan */
+    color: #015266;
     text-align: center;
 }
 
@@ -130,7 +130,7 @@ span {
 }
 
 .summary-centre p:hover {
-    color: #2d8a69; /* BurlyWood */
+    color: #2d8a69;
 }
 
 #about h3 {
@@ -141,31 +141,32 @@ span {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    display: block; /* Center image */
+    margin: 0 auto;
 }
 
 .about-image img:hover {
     border-style: solid;
-    border-color: #7fdbbb; /* Wheat */
-    border-radius: 50%;
+    border-color: #7fdbbb;
 }
 
 #border {
     padding-left: 10vh;
-    background: #ffffff68; /* Tan */
+    background: #ffffff68;
     width: 50%;
     border-radius: 25px;
-    box-shadow: 1px 1px 1px 1px #6aaa94; /* Wheat */
+    box-shadow: 1px 1px 1px 1px #6aaa94;
+    margin: 0 auto; /* Center the border */
 }
 
 #border:hover {
-    padding-left: 10vh;
-    background: #58585811; /* Tan */
-    box-shadow: 1px 1px 1px 1px #58585856; /* Wheat */
+    background: #58585811;
+    box-shadow: 1px 1px 1px 1px #58585856;
 }
 
 .contact {
     text-align: center;
-    background: #ffffff68; /* Tan */
+    background: #ffffff68;
     color: #303c4e;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -175,40 +176,46 @@ span {
 
 .contact input {
     background-color: transparent;
-    border-top-style: none;
-    border-left-style: none;
-    border-right-style: none;
-    border-bottom-style: solid;
-    border-bottom-color: #2b2b2b; /* Black */
+    border: none;
+    border-bottom: 2px solid #2b2b2b;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 .footer {
     margin-top: 30px;
     text-align: center;
+    padding: 20px; /* Added padding */
 }
 
 .map {
     height: 225px;
     width: 225px;
     border-style: solid;
-    border-color: #2b2b2b; /* Black */
+    border-color: #2b2b2b;
     border-radius: 50%;
+    display: block; /* Center map */
+    margin: 0 auto;
 }
 
 .socials {
     height: 30px;
     width: 30px;
     border-radius: 50%;
+    margin: 5px; /* Add margin for better spacing */
 }
 
 .footer a:hover {
-    box-shadow: 5px 0px 10px 5px #2b2b2b; /* Black */
+    box-shadow: 5px 0px 10px 5px #2b2b2b;
     border-radius: 50%;
 }
 
 .footer-bar {
     color: #ffffff;
-    background-color: #2d463d; /* Tan */
+    background-color: #2d463d;
+    padding: 10px; /* Add padding */
     bottom: 0;
     left: 0;
     max-width: 100%;
@@ -230,15 +237,14 @@ span {
 }
 
 #blog-slider img {
-    width: 20%; /* Reduce image width by half */
+    width: 20%;
     height: auto;
-    margin: 0 auto; /* Center the image */
+    margin: 0 auto;
     border-radius: 20%;
 }
 
 #blog-slider img:hover {
-    box-shadow: 2px 0px 1px 3px #6aaa94; /* Black */
-    border-radius: 20%;
+    box-shadow: 2px 0px 1px 3px #6aaa94;
 }
 
 .blog-description {
@@ -250,23 +256,24 @@ span {
 }
 
 .portfolio-download h2 {
-    color: #4682b4; /* Steel Blue */
+    color: #4682b4;
 }
 
 .portfolio-download a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4682b4; /* Steel Blue */
-    color: #f5f5dc; /* Tan */
+    background-color: #4682b4;
+    color: #f5f5dc;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     margin-top: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-download a:hover {
-    background-color: #f5f5dc; /* Tan */
-    color: #4682b4; /* Steel Blue */
+    background-color: #f5f5dc;
+    color: #4682b4;
     box-shadow: 0px 5px 10px rgba(70, 130, 180, 0.3);
 }
 
@@ -318,14 +325,14 @@ span {
 @media (max-width: 768px) {
     #navbar {
         position: relative;
-        box-shadow: none; /* Remove shadow on small screens */
+        box-shadow: none;
     }
 
     #navbar a {
         float: none;
         display: block;
         padding: 15px;
-        text-align: left; /* Adjust text alignment */
+        text-align: left;
     }
 
     .overlay h1 {
@@ -347,7 +354,7 @@ span {
     }
 
     .main-content {
-        padding-top: 80px; /* Adjust padding if needed */
+        padding-top: 80px;
     }
 }
 
@@ -375,12 +382,13 @@ span {
         padding-bottom: 10px;
     }
 
+    #border {
+        width: 90%;
+        padding-left: 2vh;
+    }
+
     .map {
         height: 150px;
         width: 150px;
-    }
-
-    .portfolio-download a {
-        padding: 8px 16px;
     }
 }
